@@ -16,6 +16,7 @@ function getResult(comp, p) {
 const suitan = document.querySelectorAll(".user img");
 let playerScore = 0;
 let computerScore = 0;
+let winner = 20;
 
 suitan.forEach(function (suit) {
   suit.addEventListener("click", function () {
@@ -38,9 +39,26 @@ suitan.forEach(function (suit) {
     const computerScoreDisplay = document.getElementById("computerScore");
     playerScoreDisplay.textContent = `${playerScore}`;
     computerScoreDisplay.textContent = `${computerScore}`;
+
+    // Tambahkan kondisi untuk menampilkan alert ketika skor mencapai 20
+    if (playerScore === winner || computerScore === winner) {
+      if (playerScore === winner) {
+        hasil.innerHTML = "You Won!";
+      } else {
+        hasil.innerHTML = 'You Lose!';
+      }
+      
+      
+      suitan.forEach((element) => {
+        element.style.pointerEvents = "none"; // Menonaktifkan klik pada gambar
+      });
+      setTimeout(() => {
+        location.reload(); // Ini untuk melakukan refresh halaman
+      }, 1800); // Delay 1.5 detik sebelum refresh halaman
+      
+    }
   });
 });
-
 
 // function getCompPick() {
 //   const comp = Math.random();
