@@ -5,42 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            outline: 0;
-            border: 0;
-        }
-
-        .page {
-            height: 100dvh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            height: 60%;
-            animation: transitions 1s;
-        }
-        @keyframes transitions {
-            from {
-                opacity: 0;
-                transform: scale(0);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&family=Poppins:wght@100;300;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="page">
-        <img src="naruto.jpg" alt="">
-    </div>
-    <script src="tebakAngka.js"></script>
+    <header>
+        <h1>Main Suwit</h1>
+    </header>
+
+    <main>
+
+        <section class="container-suwit komp">
+            <img src="img/gajah.png" alt="pilihan komputer" title="komputer" id="komp">
+        </section>
+
+        <section class="box-info">
+            <div class="score">
+                <!-- Komputer: -->
+                <h2 id="computerScore" class="result computer-score">Musuh</h2>
+            </div>
+            <h2 class="result pertandingan">SCORE</h2>
+            <div class="score">
+                <!-- Player: -->
+                <h2 id="playerScore" class="result player-score">Kamu   </h2>
+            </div>
+        </section>
+
+        <section class="container-suwit user">
+            <img src="img/gajah.png" alt="gajah" title="gajah" id="gajah">
+            <img src="img/semut.png" alt="semut" title="semut" id="semut">
+            <img src="img/orang.png" alt="orang" title="orang" id="orang">
+        </section>
+
+    </main>
+
+    <!-- <div class="box-score" id="computerScore">0</div>
+    <div class="box-score" id="playerScore">0</div> -->
+
+
+
+    <script src="suit2.js"></script>
 </body>
 
 </html>

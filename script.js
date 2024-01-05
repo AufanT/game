@@ -30,7 +30,7 @@ while (tanya) {
   }
 
   // hasil
-  alert(`Pilihanmu: ${p} \nPilihan AI: ${comp} \nPertandingan: ${hasil}`);
+  alert(`Pilihanmu: ${p} \nPilihan AI: ${comp} \nPertandingan: Anda ${hasil}`);
 
   tanya = confirm("Try again?");
 }
