@@ -1,14 +1,14 @@
 // menangkap pilihan komputer
 // membangkitkan bilangan random
-var maxNumber = 10;
-var AngkaBoom = Math.floor(Math.random() * maxNumber) + 1;
-var canceled = false; // Mengatur variabel untuk mengecek apakah permainan dibatalkan
+let maxNumber = 10;
+let AngkaBoom = Math.floor(Math.random() * maxNumber) + 1;
+let canceled = false; // Mengatur variabel untuk mengecek apakah permainan dibatalkan
 
 // jumlah tebakan
 
-for ( var i = 3; i > 0; i-- ) {
+for ( let i = 3; i > 0; i-- ) {
   // menangkap pilihan player
-  var player = prompt(`Angka Boom 1-10 \nAnda memiliki ${i} kali percobaan`);
+  let player = prompt(`Angka Boom 1-10 \nAnda memiliki ${i} kali percobaan`);
 
   if (player === null) {
     canceled = true; // Mengubah status menjadi permainan dibatalkan
